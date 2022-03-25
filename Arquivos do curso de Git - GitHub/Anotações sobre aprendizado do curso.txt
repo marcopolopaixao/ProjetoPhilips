@@ -1,0 +1,4 @@
+- Aprendi como configurar o ambiente git no meu computador
+- Como fazer a comunicação do meu computador com o servidor Github
+- Os comando básicos do terminal: git init, git status, git add ., git commit -m, git pull, git push, touch .gitignore
+- Comandos da branch: git branch, git branch nome da branch nome da copia, git checkout nome da branch, git checkout -b
