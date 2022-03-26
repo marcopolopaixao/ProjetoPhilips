@@ -1,0 +1,19 @@
+Todo conteúdo em um arquivo HTML é específicado por um elemento.
+Um arquivo HTML começa com um elemento que indica: 
+ - Tag de abertura
+ - Qual tipo de elemento;
+ - Que pode ou não receber um atributo;(funcionalidade que pode modificar o elemento)
+ - O conteúdo do elemento;
+ -  Tag de fechamento
+
+  Estrutura básica de um arquivo HTML
+ <!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Título da página</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    Aqui vai o código HTML que fará seu site aparecer.
+  </body>
+</html>
