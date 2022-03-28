@@ -1,5 +1,5 @@
 body{
-  background: #f7f7f7 ;
+  background: black;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   max-width: 900px;
   margin: auto;
@@ -7,7 +7,7 @@ body{
 
 
 #title,.subtitle,.post_title {
- color:#505050 
+ color:#C0C0C0 
 }
 
 #title{
@@ -17,7 +17,7 @@ body{
 
 a {
   text-decoration: line-through;
-  color: #505050;
+  color: #C0C0C0;
 }
 
 .post_title{
@@ -28,9 +28,9 @@ a {
   text-transform: capitalize;
 }
 .post{
-  background: white;
+  background: C0C0C0 ;
   padding: 15px;
-  border: 3px solid #505050;
+  border: 3px solid #C0C0C0 ;
   margin-bottom: 15px;
   border-radius: 10px;
 }
@@ -38,6 +38,8 @@ a {
   margin: 0;
   margin-bottom: 15;
   text-align: justify;
+  color: #C0C0C0;
+
 }
 .image_post{
   margin-bottom: 15px;
@@ -45,13 +47,14 @@ a {
 }
 
 .perfil{
-  border: 1px solid #505050;
+  border: 1px solid #C0C0C0 ;
   border-radius: 50%
 }
 
 .contact_list{
   list-style-type: none;
   padding-left: 15px;
+  color: #C0C0C0;
 }
 .contact_list li a {
 text-decoration: none;}
