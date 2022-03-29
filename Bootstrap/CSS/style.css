@@ -1,0 +1,48 @@
+
+body{
+  background: black;
+  font-family:  Verdana, Tahoma, sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+   }
+   h3{
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 40px;
+     font-weight: bold;
+   }
+   h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+
+.navbar{
+  background-color: #ffffff;
+}
+
+.quem-somos{
+    background-color: gray;
+
+
+}
+.margin{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.rounded-circle{
+  padding: 30px;
+}
+
+.parceiros{
+  background-color:#ffffff;
+}
+
+.serviços{
+  background-color: #5499C7;
+}
+.bg-footer{
+  font-size: 20px;
+  background-color: black;
+  color: white;
+}
