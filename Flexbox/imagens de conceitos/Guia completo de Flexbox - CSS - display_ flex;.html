@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://origamid.com/projetos/flexbox-guia-completo/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Guia completo de Flexbox - CSS - display: flex;</title>
+	<meta name="description" content="Aprenda a utilizar o flexbox para a criação de layouts responsivos com CSS nesse Guia Completo.">
+	<meta name="author" content="Origamid">
+	<meta name="theme-color" content="#693bb6">
+	<meta property="og:title" content="Guia completo de FlexBox - CSS - display: flex;">
+	<meta property="og:description" content="Aprenda a utilizar o flexbox para a criação de layouts responsivos com CSS nesse Guia Completo.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://www.origamid.com/projetos/flexbox-guia-completo/index.html">
+	<meta property="og:image" content="https://www.origamid.com/projetos/flexbox-guia-completo/guia-flexbox.png">
+	<meta property="og:site_name" content="Origamid">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="./Guia completo de Flexbox - CSS - display_ flex;_files/css" rel="stylesheet">
+	<link rel="shortcut icon" href="https://origamid.com/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="./Guia completo de Flexbox - CSS - display_ flex;_files/style.css">
+  <script async="" src="./Guia completo de Flexbox - CSS - display_ flex;_files/gtm.js.download"></script><script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MMJ8W5');
+  </script>
+</head>
+<body>
+<div class="wrapper">
+	<nav class="sidebar">
+		<div>
+			<h2>Flex Container</h2>
+			<ul>
+				<li><a href="https://origamid.com/projetos/flexbox-guia-completo/#display" class="">display</a></li>
+				<li><a href="https://origamid.com/projetos/flexbox-guia-completo/#flex-direction">flex-direction</a></li>
+				<li><a href="https://origamid.com/projetos/flexbox-guia-completo/#flex-wrap">flex-wrap</a></li>
+				<li><a href="https://origamid.com/projetos/flexbox-guia-completo/#flex-flow">flex-flow</a></li>
+				<li><a href="https://origamid.com/projetos/flexbox-guia-completo/#justify-content">justify-content</a></li>
+				<li><a href="https://origamid.com/projetos/flexbox-guia-completo/#align-items">align-items</a></li>
+				<li><a href="https://origamid.com/projetos/flexbox-guia-completo/#align-content">align-content</a></li>
+			</ul>
+		</div>
+		<div>
+			<h2>Flex Item</h2>
+			<ul>
+				<li><a href="https://origamid.com/projetos/flexbox-guia-completo/#flex-grow">flex-grow</a></li>
+				<li><a href="https://origamid.com/projetos/flexbox-guia-completo/#flex-basis">flex-basis</a></li>
+				<li><a href="https://origamid.com/projetos/flexbox-guia-completo/#flex-shrink">flex-shrink</a></li>
+				<li><a href="https://origamid.com/projetos/flexbox-guia-completo/#flex">flex</a></li>
+				<li><a href="https://origamid.com/projetos/flexbox-guia-completo/#order">order</a></li>
+				<li><a href="https://origamid.com/projetos/flexbox-guia-completo/#align-self">align-self</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="main">
+	<header class="header">
+		<div class="header-logo">
+			<a href="https://www.origamid.com/">
+				<svg id="origamid-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 143.1 24.6">
+				<title>Origamid</title>
+				<style>
+					.svg-g { fill: #8E47EF; transition: all .3s ease; }
+					#origamid-svg:hover .svg-g{ fill: white; }
+				</style>
+				<path class="svg-g" d="M68.8 21.2c2.6-.6 5.2-2.1 6.5-5.4H63.4v-3.2h17v1.5H79.6c-1 5.1-4.6 10.3-12.6 10.5l-1.7-1.7s-2.2 1-2.4 1.2c-5.5-1.6-8.7-6.7-8.7-11.7C54 5.3 59.4 0 66.1 0c4 0 6.8 1.2 9.2 3.4l-2 2.7c-1-1.1-3.6-2.9-7.1-2.9-4.8 0-8.8 3.8-8.8 9.2 0 4.5 3.3 8 7.1 8.9l4.3-.1z"></path>
+				<path d="M12.3 24.6C5.5 24.6 0 19.1 0 12.3 0 5.4 5.5 0 12.3 0c6.9 0 12.3 5.5 12.3 12.4 0 6.7-5.5 12.2-12.3 12.2zm0-21.4c-3.7 0-6.6 2-8 5.3-.5 1.2-.8 2.5-.8 3.8 0 1.3.3 2.6.8 3.8 1.5 3.3 4.4 5.3 8 5.3 3.9 0 6.9-2.2 8.3-5.9.4-1 .6-2.1.6-3.2 0-4.9-3.7-9.1-8.9-9.1zM39.3 14.8c-.7.3-1.5.4-2.3.4l6.6 8.8h-4.3l-7.8-11h-.1v11H28V.4h7.3c2.2 0 4.6.4 6.3 2C43.1 3.9 43.8 6 43.8 8c0 3.2-1.4 5.8-4.5 6.8zM35.1 3.6h-3.6v9.1h2.4c3.1 0 6.5-.9 6.5-4.6 0-3.1-2.5-4.5-5.3-4.5zM47 24.1V.4h3.5v23.7H47zM108.7 24.1v-20h-.1l-8 20h-2.1l-8-20h-.1v20H87V.4h5.4l7.1 18.1L106.6.4h5.4v23.7h-3.3zM116 24.1V.4h3.5v23.7H116zM140.1 20.7c-2.6 2.6-5.7 3.4-9.2 3.4h-7.6V.4h7.7c3.8 0 7.4 1.2 9.7 4.4 1.5 2.1 2.4 4.9 2.4 7.6 0 2.7-1 6.3-3 8.3zm-1.1-12c-1.4-3.4-4.3-5.1-8-5.1h-4.2V21h4.1c5.4 0 8.7-3.1 8.7-8.6.1-1.3-.2-2.5-.6-3.7zM78.8.4L62.6 24c1.2.4 2.5.6 3.9.6h.5L79.5 4.9h.1v19.2h3.5V.4h-4.3z"></path>
+				</svg>
+			</a>
+		</div>
+		<h1>Guia Flexbox</h1>
+	</header>
+	<article class="main-item">
+		<header class="main-item-title">
+			<h1>Flex Container</h1>
+			<p>O Flex Container é a tag que envolve os itens flex, ao indicar display: flex, essa tag passa a ser um Flex Container.</p>
+		</header>
+		<section class="propriedade" id="display">
+			<h2>1 • display</h2>
+			<div class="propriedade-content">
+				<div>
+					<p>Define o elemento como um flex container, tornando os seus filhos flex-itens.</p>
+				</div>
+				<ul>
+					<li>display: <em>flex;</em> <span>// Torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens.</span></li>
+				</ul>
+			</div>
+			<div class="propriedade-code">
+				<div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="400" width="100%" name="cp_embed_1" scrolling="no" src="./Guia completo de Flexbox - CSS - display_ flex;_files/XRRVrG.html" style="width: 100%; overflow:hidden; display:block;" title="flex" loading="lazy" id="cp_embed_XRRVrG"></iframe></div>
+			</div>
+		</section>
+		
+		<section class="propriedade" id="flex-direction">
+			<h2>2 • flex-direction</h2>
+			<div class="propriedade-content">
+				<div>
+					<p>Define a direção dos flex itens. Por padrão ele é row (linha), por isso quando o display: flex; é adicionado, os elementos ficam em linha, um do lado do outro.</p>
+					<p>A mudança de row para column geralmente acontece quando estamos definindo os estilos em media queries para o mobile. Assim você garante que o conteúdo seja apresentado em coluna única.</p>
+				</div>
+				<ul>
+					<li>flex-direction: <em>row;</em> <span>// Os itens ficam em linha</span></li>
+					<li>flex-direction: <em>row-reverse;</em> <span>// Os itens ficam em linha reversa, ou seja 3, 2, 1.</span></li>
+					<li>flex-direction: <em>column;</em> <span>// Os itens ficam em uma única coluna, um embaixo do outro.</span></li>
+					<li>flex-direction: <em>column-reverse;</em> <span>// Os itens ficam em uma única coluna, um embaixo do outro, porém em ordem reversa: 3, 2 e 1.</span></li>
+				</ul>
+			</div>
+			<div class="propriedade-code">
+				<div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="400" width="100%" name="cp_embed_2" scrolling="no" src="./Guia completo de Flexbox - CSS - display_ flex;_files/qmrdgL.html" style="width: 100%; overflow:hidden; display:block;" title="flex-direction" loading="lazy" id="cp_embed_qmrdgL"></iframe></div>
+			</div>
+		</section>
+		
+		<section class="propriedade" id="flex-wrap">
+			<h2>3 • flex-wrap</h2>
+			<div class="propriedade-content">
+				<div>
+					<p>Define se os itens devem quebrar ou não a linha. Por padrão eles não quebram linha, isso faz com que os flex itens sejam compactados além do limite do conteúdo.</p>
+					<p>Essa é geralmente uma propriedade que é quase sempre definida como flex-wrap: wrap; Pois assim quando um dos flex itens atinge o limite do conteúdo, o último item passa para a coluna debaixo e assim por diante.</p>
+				</div>
+				<ul>
+					<li>flex-wrap: <em>nowrap;</em> <span>// Valor padrão, não permite a quebra de linha.</span></li>
+					<li>flex-wrap: <em>wrap;</em> <span>// Quebra a linha assim que um dos flex itens não puder mais ser compactado.</span></li>
+					<li>flex-wrap: <em>wrap-reverse;</em> <span>// Quebra a linha assim que um dos flex itens não puder mais ser compactado. A quebra é na direção contrária, ou seja para a linha acima.</span></li>
+				</ul>
+			</div>
+			<div class="propriedade-code">
+				<div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="400" width="100%" name="cp_embed_3" scrolling="no" src="./Guia completo de Flexbox - CSS - display_ flex;_files/qmrOOw.html" style="width: 100%; overflow:hidden; display:block;" title="flex-wrap" loading="lazy" id="cp_embed_qmrOOw"></iframe></div>
+			</div>
+		</section>
+		
+		<section class="propriedade" id="flex-flow">
+			<h2>4 • flex-flow</h2>
+			<div class="propriedade-content">
+				<div>
+					<p>O flex-flow é um atalho para as propriedades flex-direction e flex-wrap. Você não verá muito o seu uso, pois geralmente quando mudamos o flex-direction para column, mantemos o padrão do flex-wrap que é nowrap.
+					</p><p>E quando mudamos o flex-wrap para wrap, mantemos o padrão do flex-direction que é row.</p>
+				</div>
+				<ul>
+					<li>flex-flow: <em>row nowrap;</em> <span>// Coloca o conteúdo em linha e não permite a quebra de linha.</span></li>
+					<li>flex-flow: <em>row wrap;</em> <span>// Coloca o conteúdo em linha e permite a quebra de linha.</span></li>
+					<li>flex-flow: <em>column nowrap;</em> <span>// Coloca o conteúdo em coluna e não permite a quebra de linha.</span></li>
+				</ul>
+			</div>
+			<div class="propriedade-code">
+				<div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="400" width="100%" name="cp_embed_4" scrolling="no" src="./Guia completo de Flexbox - CSS - display_ flex;_files/WjppjL.html" style="width: 100%; overflow:hidden; display:block;" title="flex-flow" loading="lazy" id="cp_embed_WjppjL"></iframe></div>
+			</div>
+		</section>
+		
+		<section class="propriedade" id="justify-content">
+			<h2>5 • justify-content</h2>
+			<div class="propriedade-content">
+				<div>
+					<p>Alinha os itens flex no container de acordo com a direção. A propriedade só funciona se os itens atuais não ocuparem todo o container. Isso significa que ao definir flex: 1; ou algo similar nos itens, a propriedade não terá mais função</p>
+					<p>Excelente propriedade para ser usada em casos que você deseja alinhar um item na ponta esquerda e outro na direita, como em um simples header com marca e navegação.</p>
+				</div>
+				<ul>
+					<li>justify-content: <em>flex-start;</em> <span>// Alinha os itens ao início do container.</span></li>
+					<li>justify-content: <em>flex-end;</em> <span>// Alinha os itens ao final do container.</span></li>
+					<li>justify-content: <em>center;</em> <span>// Alinha os itens ao centro do container.</span></li>
+					<li>justify-content: <em>space-between;</em> <span>// Cria um espaçamento igual entre os elementos. Mantendo o primeiro grudado no início e o último no final.</span></li>
+					<li>justify-content: <em>space-around;</em> <span>// Cria um espaçamento entre os elementos. Os espaçamentos do meio são duas vezes maiores que o inicial e final.</span></li>
+				</ul>
+			</div>
+			<div class="propriedade-code">
+				<div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="400" width="100%" name="cp_embed_5" scrolling="no" src="./Guia completo de Flexbox - CSS - display_ flex;_files/XRMMyK.html" style="width: 100%; overflow:hidden; display:block;" title="justify-content" loading="lazy" id="cp_embed_XRMMyK"></iframe></div>
+			</div>
+		</section>
+		
+		<section class="propriedade" id="align-items">
+			<h2>6 • align-items</h2>
+			<div class="propriedade-content">
+				<div>
+					<p>O align-items alinha os flex itens de acordo com o eixo do container. O alinhamento é diferente para quando os itens estão em colunas ou linhas.</p>
+					<p>Essa propriedade permite o tão sonhado alinhamento central no eixo vertical, algo que antes só era possível com diferentes hacks.</p>
+				</div>
+				<ul>
+					<li>align-items: <em>stretch;</em> <span>// Valor padrão, ele que faz com que os flex itens cresçam igualmente.</span></li>
+					<li>align-items: <em>flex-start;</em> <span>// Alinha os itens ao início.</span></li>
+					<li>align-items: <em>flex-end;</em> <span>// Alinha os itens ao final.</span></li>
+					<li>align-items: <em>center;</em> <span>// Alinha os itens ao centro.</span></li>
+					<li>align-items: <em>baseline;</em> <span>// Alinha os itens de acordo com a linha base da tipografia.</span></li>
+				</ul>
+			</div>
+			<div class="propriedade-code">
+				<div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="400" width="100%" name="cp_embed_6" scrolling="no" src="./Guia completo de Flexbox - CSS - display_ flex;_files/pPePeb.html" style="width: 100%; overflow:hidden; display:block;" title="justify-content" loading="lazy" id="cp_embed_pPePeb"></iframe></div>
+			</div>
+		</section>
+		
+		<section class="propriedade" id="align-content">
+			<h2>7 • align-content</h2>
+			<div class="propriedade-content">
+				<div>
+					<p>Alinha as linhas do container em relação ao eixo vertical. A propriedade só funciona se existir mais de uma linha de flex-itens. Para isso o flex-wrap precisa ser wrap.</p>
+					<p>Além disso o efeito dela apenas será visualizado caso o container seja maior que a soma das linhas dos itens. Isso significa que se você não definir height para o container, a propriedade não influencia no layout.</p>
+				</div>
+				<ul>
+					<li>align-content: <em>stretch;</em> <span>// Valor padrão, ele que faz com que os flex itens cresçam igualmente na vertical.</span></li>
+					<li>align-content: <em>flex-start;</em> <span>// Alinha todas as linhas de itens ao início.</span></li>
+					<li>align-content: <em>flex-end;</em> <span>// Alinha todas as linhas de itens ao final.</span></li>
+					<li>align-content: <em>center;</em> <span>// Alinha todas as linhas de itens ao centro.</span></li>
+					<li>align-content: <em>space-between;</em> <span>// Cria um espaçamento igual entre as linhas. Mantendo a primeira grudada no topo e a última no bottom.</span></li>
+					<li>align-content: <em>space-around;</em> <span>// Cria um espaçamento entre as linhas. Os espaçamentos do meio são duas vezes maiores que o top e bottom.</span></li>
+				</ul>
+			</div>
+			<div class="propriedade-code">
+				<div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="400" width="100%" name="cp_embed_7" scrolling="no" src="./Guia completo de Flexbox - CSS - display_ flex;_files/0ac60764b8822d834d7625d017017942.html" style="width: 100%; overflow:hidden; display:block;" title="align-content" loading="lazy" id="cp_embed_0ac60764b8822d834d7625d017017942"></iframe></div>
+			</div>
+		</section>
+	</article>
+	
+	<article class="main-item">
+		<header class="main-item-title">
+			<h1>Flex Item</h1>
+			<p>Os Flex Itens são os filhos diretos do Flex Container, lembrado que uma tag se torna um flex container a partir do momento que você definir display: flex.</p>
+			<p>É possível que um Flex Item seja também um Flex Container, basta definir display: flex nele. Assim os filhos desse item também serão flex itens.</p>
+		</header>
+		<section class="propriedade" id="flex-grow">
+			<h2>1 • flex-grow</h2>
+			<div class="propriedade-content">
+				<div>
+					<p>Define a habilidade de um flex item crescer. Por padrão o valor é zero, assim os flex itens ocupam um tamanho máximo relacionado o conteúdo interno deles ou ao width definido.</p>
+					<p>Ao definir 1 para todos os Flex Itens, eles tentarão ter a mesma largura e vão ocupar 100% do container. Digo tentarão pois caso um elemento possua um conteúdo muito largo, ele irá respeitar o mesmo.</p>
+					<p>Se você tiver uma linha com quatro itens, onde três são flex-grow: 1 e um flex-grow: 2, o flex-grow: 2 tentará ocupar 2 vezes mais espaço extra do que os outros elementos.</p>
+					<p>OBS: justify-content não funciona em items com flex-grow definido.</p>
+				</div>
+				<ul>
+					<li>flex-grow: <em>número;</em> <span>// Basta definir um número</span></li>
+					<li>flex-grow: <em>0;</em> <span>// Obedece o width do elemento ou o flex-basis.</span></li>
+				</ul>
+			</div>
+			<div class="propriedade-code">
+				<div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="400" width="100%" name="cp_embed_8" scrolling="no" src="./Guia completo de Flexbox - CSS - display_ flex;_files/ybMEpV.html" style="width: 100%; overflow:hidden; display:block;" title="flex-direction" loading="lazy" id="cp_embed_ybMEpV"></iframe></div>
+			</div>
+		</section>
+		
+		<section class="propriedade" id="flex-basis">
+			<h2>2 • flex-basis</h2>
+			<div class="propriedade-content">
+				<div>
+					<p>Indica o tamanho inicial do flex item antes da distribuição do espaço restante.</p>
+					<p>Quando definimos o flex-grow: 1; e possuímos auto no basis, o valor restante para ocupar o container é distribuído ao redor do conteúdo do flex-item.</p>
+				</div>
+				<ul>
+					<li>flex-basis: <em>auto;</em> <span>// Esse é o padrão, ele faz com que a largura da base seja igual a do item. Se o item não tiver tamanho especificado, o tamanho será de acordo com o conteúdo.</span></li>
+					<li>flex-basis: <em>unidade;</em> <span>// Pode ser em %, em, px e etc.</span></li>
+					<li>flex-basis: <em>0;</em> <span>// Se o grow for igual ou maior que 1, ele irá tentar manter todos os elementos com a mesma largura, independente do conteúdo (por isso 0 é o valor mais comum do flex-basis). Caso contrário o item terá a largura do seu conteúdo.</span></li>
+				</ul>
+			</div>
+			<div class="propriedade-code">
+				<div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="400" width="100%" name="cp_embed_9" scrolling="no" src="./Guia completo de Flexbox - CSS - display_ flex;_files/vmxVzP.html" style="width: 100%; overflow:hidden; display:block;" title="flex-basis" loading="lazy" id="cp_embed_vmxVzP"></iframe></div>
+			</div>
+		</section>
+		
+		<section class="propriedade" id="flex-shrink">
+			<h2>3 • flex-shrink</h2>
+			<div class="propriedade-content">
+				<div>
+					<p>Define a capacidade de redução de tamanho do item.</p>
+				</div>
+				<ul>
+					<li>flex-shrink: <em>1;</em> <span>// Valor padrão, permite que os itens tenham os seus tamanhos (seja esse tamanho definido a partir de width ou flex-basis) reduzidos para caber no container.</span></li>	
+					<li>flex-shrink: <em>0;</em> <span>// Não permite a diminuição dos itens, assim um item com flex-basis: 300px; nunca diminuirá menos do que 300px, mesmo que o conteúdo não ocupe todo esse espaço.</span></li>
+					<li>flex-shrink: <em>número;</em> <span>// Um item com shrink: 3 diminuirá 3 vezes mais que um item com 1.</span></li>			
+				</ul>
+			</div>
+			<div class="propriedade-code">
+				<div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="400" width="100%" name="cp_embed_10" scrolling="no" src="./Guia completo de Flexbox - CSS - display_ flex;_files/KmmaWv.html" style="width: 100%; overflow:hidden; display:block;" title="flex-shrink" loading="lazy" id="cp_embed_KmmaWv"></iframe></div>
+			</div>
+		</section>
+		
+		<section class="propriedade" id="flex">
+			<h2>4 • flex</h2>
+			<div class="propriedade-content">
+				<div>
+					<p>Atalho para as propriedades flex-grow, flex-shrink e flex-basis. Geralmente você verá a propriedade flex nos flex itens ao invés de cada um dos valores separados.</p>
+					<p>Para melhor consistência entre os browsers, é recomendado utilizar a propriedade flex ao invés de cada propriedade separada.</p>
+					<p>No exemplo é possível ver as mesmas configurações do exemplo do flex-basis porém agora utilizando apenas a propriedade flex.</p>
+				</div>
+				<ul>
+					<li>flex: <em>1;</em> <span>// Define flex-grow: 1; flex-shrink: 1; e flex-basis: 0; (em alguns browsers define como 0%, pois estes ignoram valores sem unidades, porém a função de 0 e 0% é a mesma.)</span></li>	
+					<li>flex: <em>0 1 auto;</em> <span>// Esse é o padrão, se você não definir nenhum valor de flex ou para as outras propriedades separadas, o normal será flex-grow: 0, flex-shrink: 1 e flex-basis: auto.</span></li>
+					<li>flex: <em>2;</em> <span>// Define exatamente da mesma forma que o flex: 1; porém neste caso o flex-grow será de 2, o flex-shrink continuará 1 e o flex-basis 0.</span></li>
+					<li>flex: <em>3 2 300px;</em> <span>// flex-grow: 3, flex-shrink: 2 e flex-basis: 300px;</span></li>
+				</ul>
+			</div>
+			<div class="propriedade-code">
+				<div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="400" width="100%" name="cp_embed_11" scrolling="no" src="./Guia completo de Flexbox - CSS - display_ flex;_files/OmmWKg.html" style="width: 100%; overflow:hidden; display:block;" title="flex" loading="lazy" id="cp_embed_OmmWKg"></iframe></div>
+			</div>
+		</section>
+		
+		<section class="propriedade" id="order">
+			<h2>5 • order</h2>
+			<div class="propriedade-content">
+				<div>
+					<p>Modifica a ordem dos flex itens. Sempre do menor para o maior, assim order: 1, aparece na frente de order: 5.</p>
+				</div>
+				<ul>
+					<li>order: <em>número;</em> <span>// Número para modificar a ordem padrão. Pode ser negativo.</span></li>	
+					<li>order: <em>0;</em> <span>// 0 é o valor padrão e isso significa que a ordem dos itens será a ordem apresentada no HTML. Se você quiser colocar um item do meio da lista no início da mesma, sem modificar os demais, o ideal é utilizar um valor negativo para este item, já que todos os outros são 0.</span></li>	
+				</ul>
+			</div>
+			<div class="propriedade-code">
+				<div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="400" width="100%" name="cp_embed_12" scrolling="no" src="./Guia completo de Flexbox - CSS - display_ flex;_files/VbbPEY.html" style="width: 100%; overflow:hidden; display:block;" title="order" loading="lazy" id="cp_embed_VbbPEY"></iframe></div>
+			</div>
+		</section>
+		
+		<section class="propriedade" id="align-self">
+			<h2>6 • align-self</h2>
+			<div class="propriedade-content">
+				<div>
+					<p>O align-self serve para definirmos o alinhamento específico de um único flex item dentro do nosso container. Caso um valor seja atribuído, ele passara por cima do que for atribuído no align-items do container.</p>
+					<p>Vale lembrar que o alinhamento acontece tanto em linha quanto em colunas. Por exemplo o flex-start quando os itens estão em linhas, alinha o item ao topo da sua linha. Quando em colunas, alinha o item ao início (esquerda) da coluna.</p>
+				</div>
+				<ul>
+					<li>align-self: <em>auto;</em> <span>// Valor inicial padrão. Vai respeitar o que for definido pelo align-items no flex-container.</span></li>	
+					<li>align-self: <em>flex-start;</em> <span>// Alinha o item ao início.</span></li>	
+					<li>align-self: <em>flex-end;</em> <span>// Alinha o item ao final.</span></li>	
+					<li>align-self: <em>center;</em> <span>// Alinha o item ao centro.</span></li>	
+					<li>align-self: <em>baseline;</em> <span>// Alinha o item a linha de base.</span></li>	
+					<li>align-self: <em>stretch;</em> <span>// Estica o item.</span></li>	
+				</ul>
+			</div>
+			<div class="propriedade-code">
+				<div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="400" width="100%" name="cp_embed_13" scrolling="no" src="./Guia completo de Flexbox - CSS - display_ flex;_files/Vbbpvj.html" style="width: 100%; overflow:hidden; display:block;" title="align-self" loading="lazy" id="cp_embed_Vbbpvj"></iframe></div>
+			</div>
+		</section>
+	</article>
+	<footer class="footer">
+		<p><a href="https://www.origamid.com/">Origamid</a> © 2012 - 2017. Alguns direitos reservados. CNPJ: 23.811.568/0001-98</p>
+		<p>Praia de Botafogo, 300, 5º andar - Botafogo - Rio de Janeiro - RJ - 22250-040.</p>
+		<p>Principais referências utilizadas para a criação deste guia: <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">CSS Tricks</a> e <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes" target="_blank">MDN</a></p>
+	</footer>
+	</div>
+</div>
+	
+<script async="" src="./Guia completo de Flexbox - CSS - display_ flex;_files/ei.js.download"></script>
+<script src="./Guia completo de Flexbox - CSS - display_ flex;_files/jquery-3.2.1.min.js.download"></script>
+<script src="./Guia completo de Flexbox - CSS - display_ flex;_files/main.js.download"></script>
+
+</body></html>

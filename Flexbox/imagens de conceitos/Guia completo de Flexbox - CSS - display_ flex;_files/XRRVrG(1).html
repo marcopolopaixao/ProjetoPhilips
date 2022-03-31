@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)https://cdpn.io/origamid/fullembedgrid/XRRVrG?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>CodePen - flex</title>
+  
+  
+  
+  
+<style>
+/* Flex */
+.flex {
+	display: flex;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.flex-item-1 {
+	flex: 1;
+}
+
+/* Flex Item */
+.item {
+	margin: 5px;
+	background: tomato;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.container {
+	max-width: 400px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+}
+
+h1 {
+	text-align: center;
+	margin: 20px 0 0 0;
+	font-size: 1.25em;
+	font-weight: normal;
+}
+
+body {
+	font-family: monospace;
+	color: #333;
+}
+</style>
+
+  
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <h1>display: block;</h1>
+<section class="container">
+	<div class="item">1</div>
+	<div class="item">2</div>
+	<div class="item">3</div>
+	<div class="item">4</div>
+</section>
+
+<h1>display: flex;</h1>
+<section class="container flex">
+	<div class="item">1</div>
+	<div class="item">2</div>
+	<div class="item">3</div>
+	<div class="item">4</div>
+</section>
+
+<h1>display: flex;</h1>
+<section class="container flex">
+	<div class="item">Teste 1</div>
+	<div class="item">Teste 2</div>
+	<div class="item">Teste 3</div>
+	<div class="item">Teste 4</div>
+	<div class="item">Teste 5</div>
+	<div class="item">Teste 6</div>
+	<div class="item">Teste 7</div>
+</section>
+
+<h1>display: flex;</h1>
+<section class="container flex flex-wrap">
+	<div class="item">Teste 1</div>
+	<div class="item">Teste 2</div>
+	<div class="item">Teste 3</div>
+	<div class="item">Teste 4</div>
+	<div class="item">Teste 5</div>
+	<div class="item">Teste 6</div>
+	<div class="item">Teste 7</div>
+</section>
+
+<h1>display: flex; // flex-item-1</h1>
+<section class="container flex">
+	<div class="item flex-item-1">Teste 1</div>
+	<div class="item flex-item-1">Teste 2</div>
+	<div class="item flex-item-1">Teste 3</div>
+</section>
+  
+  
+  
+  
+
+  <script src="./iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js.download"></script>
+
+
+
+ 
+</body></html>
