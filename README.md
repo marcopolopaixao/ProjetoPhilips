@@ -1,2 +1,2 @@
 #ProjetoPhilips / DIO
-Repositório  para  armazenar as tarefas do projeto.
+Repositório  para armazenar arquiv os de estudo, exercícios e desafios de pr ojetos.  
