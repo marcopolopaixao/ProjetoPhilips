@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fundamentos flex-shirink </title>
+  <Style>
+    .flex-container{
+      display: flex;
+      border: 2px solid black;
+      max-width: 350px;
+    }
+    .item{
+      background-color: orangered;
+      margin: 5px;
+      font-size: 25px;
+      text-align: center;
+    }
+    .s-1{
+      flex-shrink: 1;
+    }
+    .fg-1{
+      flex-grow: 1;
+    }
+    .s-0{
+      flex-shrink: 0;
+      flex-basis: 100px;
+    }
+    .s-2{
+      flex-shrink: 2;
+      
+    }
+    .s-3{
+      flex-shrink: 3;
+        }
+
+
+  </Style>
+</head>
+<body>
+  <p>flex-shrink 1 </p>
+  <div class="flex-container">
+    <div class="item s-1 fg-1  ">AA</div>
+    <div class="item s-1 fg-1 ">BB</div>
+    <div class="item s-1 fg-1 ">CC</div>
+    <div class="item s-1 fg-1 ">DD</div>
+    <div class="item s-1 fg-1 ">EE</div>
+   </div>
+   <p> flex-shirink com itens de tamanho diferentes </p>
+   <div class="flex-container">
+    <div class="item s-1 fg-1  ">AA</div>
+    <div class="item s-1 fg-1 ">BB</div>
+    <div class="item s-1 fg-1 ">Marcos Paulo da Silva Paixão</div>
+    <div class="item s-1 fg-1 ">DD</div>    
+   </div>
+   <p> flex-shirink 0 / basis 100px </p>
+   <div class="flex-container">
+    <div class="item s-0 fg-1  ">AA</div>
+    <div class="item s-0 fg-1 ">BB</div>
+    <div class="item s-0 fg-1 ">Marcos Paulo da Silva Paixão</div>
+    <div class="item s-0 fg-1 ">DD</div>    
+   </div>
+   <p> flex-shirink mix / basis 100px </p>
+   <div class="flex-container">
+    <div class="item s-1 fg-1  ">ABBA</div>
+    <div class="item s-2 fg-1 ">BB</div>
+    <div class="item s-2 fg-1 ">Marcos Paulo da Silva Paixão</div>
+    <div class="item s-0 fg-1 ">DDDDD</div>    
+   </div>
+</body>
+</html>
