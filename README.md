@@ -1,2 +1,2 @@
 #ProjetoPhilips / DIO
-Repositório  para armazenar arquiv os de estudo, exercícios e desafios de pr ojetos.  
+Repositório  para aquivamento de exercícios, informações e desafios de projeto.   
