@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@300;400&display=swap');
 
  *{
    padding: 0;
    margin: 0;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
  }
+ html {
+  scroll-behavior: smooth;
+}
  ul{
    list-style: none;
    margin: 0;
@@ -23,7 +27,7 @@
   max-width: 992px;
   margin: auto;
   width: 100%;  
-  min-width: 320px;
+  min-width: 320px;  
 }
 
 header .list-items{
@@ -32,7 +36,6 @@ max-width: 260px;
 width: 100%;
 justify-content: space-between;
 align-items: center;
-
 }
 .list-items li a{
 color: #fff;
